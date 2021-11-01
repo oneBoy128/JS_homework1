@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    let arr = [[1, [2, 3], 4], [5, [6, 7], 8, 9]];
+    let new_arr = [];
+    function pan_duan(arr)
+    {
+        for(let i = 0;i<arr.length;i++)
+        {
+            if(Array.isArray(arr[i]))
+            {
+                pan_duan(arr[i]);
+            }
+            else
+            {
+                new_arr.push(arr[i]);
+            }
+        }
+        return new_arr;
+    }
+    console.log(pan_duan(arr));
+</script>
+</head>
+<body>
+    
+</body>
+</html>

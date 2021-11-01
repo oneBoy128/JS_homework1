@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script>
+    let obj = {name:"oneBoy",age:20,gender:'male'};
+    function copyObjct(insertObj)
+    {
+        let newObj = {};
+        for(k in insertObj)
+        {
+            newObj[k] = insertObj[k];
+        }
+        return newObj;
+    }
+    let obj2 = copyObjct(obj);
+    let obj3 = copyObjct(obj);
+    let obj4 = copyObjct(obj);
+    let obj5 = copyObjct(obj);
+    let arr = [];
+    arr.push(obj2,obj3,obj4,obj5);
+    console.table(arr);
+</script>
+</head>
+<body>
+    
+</body>
+</html>
